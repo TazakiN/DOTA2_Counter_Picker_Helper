@@ -27,13 +27,16 @@ def main():
     elif nama_hero == "Reset":
         must_play = set()
         dont_play = set()
+        hero_yang_sudah_diinput = set()
         print("Set telah direset")
+        main()
+    elif nama_hero not in dota_heroes:
+        print("\033[91mHero tidak ditemukan\033[0m")
         main()
 
     # Mengambil data dari website dota2.fandom.com sesuai dengan nama hero
     url = f"https://dota2.fandom.com/wiki/{nama_hero}/Counters"
     hero_yang_sudah_diinput.add(nama_hero)
-    # print(url)
     response = requests.get(url)
     with requests.get(url) as response:
         soup = BeautifulSoup(response.content, "html.parser")
