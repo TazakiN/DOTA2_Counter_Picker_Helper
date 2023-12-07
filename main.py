@@ -84,6 +84,9 @@ def main():
     # must_play - dont_play
     must_play.difference_update(dont_play)
 
+    # Secara keseluruhan, operasi yang dilakukan adalah
+    # (must_play (sebelumnya) ∩ must_play (hero yang baru)) - dont_play - hero_yang_sudah_diinput
+
     # ambil 10 hero pertama dari must_play
     top_heroes = list(islice(must_play, 10))
 
