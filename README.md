@@ -20,7 +20,7 @@ Pembantu Pemilih Kontra DOTA 2 adalah program yang dirancang untuk membantu peng
 
 ## Installation
 
-1. Klona repositori: `git clone https://github.com/your-username/DOTA2_Counter_Picker_Helper.git`
+1. Klona repositori: `git clone https://github.com/TazakiN/DOTA2_Counter_Picker_Helper.git`
 2. Buka direktori proyek: `cd DOTA2_Counter_Picker_Helper`
 3. Pastikan Anda telah menginstal semua dependensi [Requirements](#Requirements).
 
