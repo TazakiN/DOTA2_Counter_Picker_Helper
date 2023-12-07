@@ -9,7 +9,7 @@ hero_yang_sudah_diinput = set()
 
 # baca file dota_heroes.txt
 with open("dota_heroes.txt", "r") as f:
-    dota_heroes = [line.rstrip() for line in f]
+    dota_heroes = [line.rstrip().replace(" ", "_") for line in f]
 
 
 def main():
@@ -52,7 +52,7 @@ def main():
             elif tag["id"] == "Good_against...":
                 flag = "good"
             elif tag["id"] == "Works_well_with...":
-                flag = "close"
+                break
         elif (
             flag
             and tag.name == "a"
@@ -63,19 +63,22 @@ def main():
                 # jika hero tersebut sudah ada di must_play, tempatkan di urutan pertama
                 if tag["title"] in must_play:
                     must_play.remove(tag["title"])
-                    must_play.add(tag["title"])
-                else:
-                    must_play.add(tag["title"])
+                # Secara tidak langsung, akan melakukan operasi gabungan antara himpunan must_play sebelumnya dengan must_play hero yang baru
+                # atau must_play (sebelumnya) U must_play (hero yang baru)
+                must_play.add(tag["title"])
             elif flag == "good":
+                # Secara tidak langsung, akan melakukan operasi gabungan antara himpunan dont_play sebelumnya dengan dont_play hero yang baru
+                # atau dont_play (sebelumnya) U dont_play (hero yang baru)
                 dont_play.add(tag["title"])
-            elif flag == "close":
-                break
 
     # hapus nama hero dan semua nama hero yang sudah diinput dari set must_play dan dont_play
+    # must_play - hero_yang_sudah_diinput
     must_play.difference_update(hero_yang_sudah_diinput)
+    # dont_play - hero_yang_sudah_diinput
     dont_play.difference_update(hero_yang_sudah_diinput)
 
     # pastikan tidak ada hero di must_play yang ada di dont_play
+    # must_play - dont_play
     must_play.difference_update(dont_play)
 
     # ambil 10 hero pertama dari must_play
