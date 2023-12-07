@@ -20,9 +20,9 @@ Pembantu Pemilih Kontra DOTA 2 adalah program yang dirancang untuk membantu peng
 
 ## Installation
 
-1. Klona repositori: `git clone https://github.com/TazakiN/DOTA2_Counter_Picker_Helper.git`
+1. Clone repositori: `git clone https://github.com/TazakiN/DOTA2_Counter_Picker_Helper.git`
 2. Buka direktori proyek: `cd DOTA2_Counter_Picker_Helper`
-3. Pastikan Anda telah menginstal semua dependensi [Requirements](#Requirements).
+3. Pastikan Anda telah menginstal semua dependensi yang terdapat pada [Requirements](#Requirements).
 
 ## Usage
 
@@ -30,6 +30,13 @@ Pembantu Pemilih Kontra DOTA 2 adalah program yang dirancang untuk membantu peng
 2. Ikuti petunjuk untuk memasukkan nama-nama Hero lawan.
 3. Program akan menganalisis data dan menampilkan Hero yang direkomendasikan untuk pengguna mainkan.
 4. Program akan meminta pengguna untuk memasukkan nama-nama Hero lawan lagi. Jika pengguna memasukkan "exit", program akan berhenti. Jika pengguna memasukkan "reset", program akan mereset pilihan Hero lawan.
+
+## Room for Improvement
+
+1. Menambahkan fitur input Hero yang dimainkan oleh pengguna menggunakan singkatan nama Hero yang lazim digunakan.
+2. Meningkatkan akurasi rekomendasi Hero yang diberikan dengan memanfaatkan data lainnya seperti _win-rate_ dan _pick-rate_.
+3. Menambahkan fitur untuk memilih Hero berdasarkan role yang diinginkan pengguna.
+4. Meningkatkan kecepatan program dengan teknik-teknik seperti _multithreading_.
 
 ## Contributing
 
