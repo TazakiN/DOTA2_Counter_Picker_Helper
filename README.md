@@ -2,14 +2,14 @@
 
 ## Overview
 
-Pembantu Pemilih Kontra DOTA 2 adalah program yang dirancang untuk membantu pengguna dalam memilih pahlawan yang paling cocok untuk dimainkan dalam permainan DOTA 2. Ini menggunakan prinsip teori himpunan untuk menganalisis dan merekomendasikan pahlawan berdasarkan pemilihan pahlawan lawan.
+Pembantu Pemilih Kontra DOTA 2 adalah program yang dirancang untuk membantu pengguna dalam memilih Hero yang paling cocok untuk dimainkan dalam Game DOTA 2. Program ini menggunakan prinsip teori himpunan untuk menganalisis dan merekomendasikan Hero berdasarkan pemilihan Hero lawan.
 
 ## Features
 
-- Antarmuka yang ramah pengguna: Program ini meminta pengguna untuk memasukkan nama-nama pahlawan lawan.
-- Pengambilan data: Program ini mengambil data pahlawan dari situs web dota2.fandom.com.
-- Operasi himpunan: Program ini melakukan operasi himpunan untuk menentukan pahlawan terbaik untuk melawan pahlawan lawan.
-- Tampilan rekomendasi: Program ini menampilkan pahlawan yang direkomendasikan untuk pengguna mainkan.
+- Antarmuka yang ramah pengguna: Program ini meminta pengguna untuk memasukkan nama-nama Hero lawan.
+- Pengambilan data: Program ini mengambil data Hero dari situs web [dota2.fandom.com](https://dota2.fandom.com).
+- Operasi himpunan: Program ini melakukan operasi himpunan untuk menentukan Hero terbaik untuk melawan Hero lawan.
+- Tampilan rekomendasi: Program ini menampilkan Hero yang direkomendasikan untuk pengguna mainkan.
 
 ## Requirements
 
@@ -27,9 +27,9 @@ Pembantu Pemilih Kontra DOTA 2 adalah program yang dirancang untuk membantu peng
 ## Usage
 
 1. Jalankan program: `python main.py`
-2. Ikuti petunjuk untuk memasukkan nama-nama pahlawan lawan.
-3. Program akan menganalisis data dan menampilkan pahlawan yang direkomendasikan untuk pengguna mainkan.
-4. Program akan meminta pengguna untuk memasukkan nama-nama pahlawan lawan lagi. Jika pengguna memasukkan "exit", program akan berhenti. Jika pengguna memasukkan "reset", program akan mereset pilihan pahlawan lawan.
+2. Ikuti petunjuk untuk memasukkan nama-nama Hero lawan.
+3. Program akan menganalisis data dan menampilkan Hero yang direkomendasikan untuk pengguna mainkan.
+4. Program akan meminta pengguna untuk memasukkan nama-nama Hero lawan lagi. Jika pengguna memasukkan "exit", program akan berhenti. Jika pengguna memasukkan "reset", program akan mereset pilihan Hero lawan.
 
 ## Contributing
 
@@ -41,5 +41,4 @@ Proyek ini dilisensikan di bawah [Lisensi MIT](LICENSE).
 
 ## Acknowledgements
 
-- [dota2.fandom.com](https://dota2.fandom.com) atas penyediaan data pahlawan.
-- [Python](https://www.python.org) sebagai bahasa pemrograman yang digunakan dalam proyek ini.
+- [dota2.fandom.com](https://dota2.fandom.com) atas penyediaan data Hero DOTA 2 dan Counter-nya.
