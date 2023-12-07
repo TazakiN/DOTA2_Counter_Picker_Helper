@@ -67,11 +67,11 @@ def main():
                 if tag["title"] in must_play:
                     must_play.remove(tag["title"])
                 # Secara tidak langsung, akan melakukan operasi gabungan antara himpunan must_play sebelumnya dengan must_play hero yang baru
-                # atau must_play (sebelumnya) U must_play (hero yang baru)
+                # atau must_play (sebelumnya) ∪ must_play (hero yang baru)
                 must_play.add(tag["title"])
             elif flag == "good":
                 # Secara tidak langsung, akan melakukan operasi gabungan antara himpunan dont_play sebelumnya dengan dont_play hero yang baru
-                # atau dont_play (sebelumnya) U dont_play (hero yang baru)
+                # atau dont_play (sebelumnya) ∪ dont_play (hero yang baru)
                 dont_play.add(tag["title"])
 
     # hapus nama hero dan semua nama hero yang sudah diinput dari set must_play dan dont_play
