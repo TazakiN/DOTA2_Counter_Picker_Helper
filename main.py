@@ -13,7 +13,7 @@ with open("dota_heroes.txt", "r") as f:
 
 
 def main():
-    global must_play, dont_play
+    global must_play, dont_play, hero_yang_sudah_diinput
 
     # input nama hero
     nama_hero = (
@@ -51,6 +51,8 @@ def main():
                 flag = "bad"
             elif tag["id"] == "Good_against...":
                 flag = "good"
+            elif tag["id"] == "Works_well_with...":
+                flag = "close"
         elif (
             flag
             and tag.name == "a"
@@ -66,6 +68,8 @@ def main():
                     must_play.add(tag["title"])
             elif flag == "good":
                 dont_play.add(tag["title"])
+            elif flag == "close":
+                break
 
     # hapus nama hero dan semua nama hero yang sudah diinput dari set must_play dan dont_play
     must_play.difference_update(hero_yang_sudah_diinput)
