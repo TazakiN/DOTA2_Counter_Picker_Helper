@@ -1,4 +1,4 @@
-# Pembantu Pemilih Kontra DOTA 2
+# Counter Picker Helper for DOTA 2
 
 ## Gambaran
 
