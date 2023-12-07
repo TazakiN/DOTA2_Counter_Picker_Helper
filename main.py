@@ -33,6 +33,9 @@ def main():
     elif nama_hero not in dota_heroes:
         print("\033[91mHero tidak ditemukan\033[0m")
         main()
+    elif nama_hero in hero_yang_sudah_diinput:
+        print("\033[91mHero sudah diinput\033[0m")
+        main()
 
     # Mengambil data dari website dota2.fandom.com sesuai dengan nama hero
     url = f"https://dota2.fandom.com/wiki/{nama_hero}/Counters"
