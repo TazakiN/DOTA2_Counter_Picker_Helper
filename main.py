@@ -2,7 +2,7 @@ from bs4 import BeautifulSoup
 from itertools import islice
 import requests
 
-# inisiaisasi set dan list
+# inisiaisasi set / himpunan global
 must_play = set()
 dont_play = set()
 hero_yang_sudah_diinput = set()
@@ -30,6 +30,8 @@ def main():
         hero_yang_sudah_diinput = set()
         print("Set telah direset")
         main()
+    elif nama_hero == "Kotl":
+        nama_hero = "Keeper_of_the_Light"
     elif nama_hero not in dota_heroes:
         print("\033[91mHero tidak ditemukan\033[0m")
         main()
@@ -81,30 +83,31 @@ def main():
     # dont_play - hero_yang_sudah_diinput
     dont_play.difference_update(hero_yang_sudah_diinput)
 
-    # pastikan tidak ada hero di must_play yang ada di dont_play
+    # Melakukan operasi selisih antara himpunan must_play dan dont_play
     # must_play - dont_play
     must_play.difference_update(dont_play)
 
     # Secara keseluruhan, operasi yang dilakukan adalah
-    # (must_play (sebelumnya) ∩ must_play (hero yang baru)) - dont_play - hero_yang_sudah_diinput
+    # (must_play (sebelumnya) ∪ must_play (hero yang baru)) - (dont_play (sebelumnya) ∪ dont_play (hero yang baru)) - hero_yang_sudah_diinput
 
     # ambil 10 hero pertama dari must_play
     top_heroes = list(islice(must_play, 10))
 
-    # menampilkan nama hero lawan di hero_yang_sudah_diinput dengan warna merah
+    # Menampilkan nama hero lawan di hero_yang_sudah_diinput
+    # dengan warna hijau
     print("Hero yang dimainkan lawan:", end="")
     for hero in hero_yang_sudah_diinput:
-        # print hero dengan warna hijau dan pisahkan dengan koma dan spasi
         print(f"\033[92m {hero.replace('_', ' ')}\033[0m,", end="")
+    # Menghilangkan koma di akhir
     print("\b \n")
-    # hilangkan koma di akhir
+    # Menampilkan nama hero yang harus dimainkan
     print("Hero yang baik untuk dimainkan:")
     for i, hero in enumerate(top_heroes, start=1):
         print(f"{i}. {hero}")
     print()
 
     print(
-        "ketik \033[31mreset\033[0m untuk mengosongkan set dan \033[31mexit\033[0m untuk keluar dari program"
+        "ketik \033[31mreset\033[0m untuk mengosongkan set atau \033[31mexit\033[0m untuk keluar dari program"
     )
     main()
 
