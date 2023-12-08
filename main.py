@@ -55,6 +55,7 @@ def main():
             elif tag["id"] == "Good_against...":
                 flag = "good"
             elif tag["id"] == "Works_well_with...":
+                # menghentikan pencarian jika sudah menemukan tag dengan id "Works_well_with..."
                 break
         elif (
             flag
@@ -90,6 +91,13 @@ def main():
     # ambil 10 hero pertama dari must_play
     top_heroes = list(islice(must_play, 10))
 
+    # menampilkan nama hero lawan di hero_yang_sudah_diinput dengan warna merah
+    print("Hero yang dimainkan lawan:", end="")
+    for hero in hero_yang_sudah_diinput:
+        # print hero dengan warna hijau dan pisahkan dengan koma dan spasi
+        print(f"\033[92m {hero.replace('_', ' ')}\033[0m,", end="")
+    print("\b \n")
+    # hilangkan koma di akhir
     print("Hero yang baik untuk dimainkan:")
     for i, hero in enumerate(top_heroes, start=1):
         print(f"{i}. {hero}")
