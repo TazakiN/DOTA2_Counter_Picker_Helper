@@ -12,6 +12,23 @@ with open("dota_heroes.txt", "r") as f:
     dota_heroes = [line.rstrip().replace(" ", "_") for line in f]
 
 
+def splash_screen():
+    # print my ascii art splash screen in red
+    print("\033[91m")
+
+    print(
+        """
+ __  __ ___     __    __                         
+|  \\/  \\ |  /\\   _)  |__). _|  __ |__| _| _  _ _ 
+|__/\\__/ | /--\\ /__  |   |(_|(    |  |(-||_)(-|  
+                                         |      
+        """
+    )
+
+
+splash_screen()
+
+
 def main():
     global must_play, dont_play, hero_yang_sudah_diinput
 
